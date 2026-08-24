@@ -47,7 +47,7 @@ git push -u origin main
 
 ## Images
 
-Every photo is a placeholder from [Picsum Photos](https://picsum.photos) (seeded, so they're stable across reloads) — reliable and free to hotlink, but not therapy-themed. Swap the `src` attributes for licensed or branded photography before shipping. Logo mark and social icons are hand-drawn inline SVG, so there are zero binary assets to manage.
+The site uses mental-wellness-themed photography throughout, with six locally stored Gemini-generated service images in `assets/` and healthcare-focused remote imagery elsewhere. Review image usage rights and replace remote sources with approved branded photography before shipping. Logo mark and social icons are hand-drawn inline SVG.
 
 ## Accessibility notes
 

@@ -49,6 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var quoteText = document.getElementById('testiQuoteText');
   var authorName = document.getElementById('testiAuthorName');
   var authorImg = document.getElementById('testiAuthorImg');
+  var portraitImg = document.getElementById('testiPortraitImg');
+  var avatarSources = {
+    'mentara-avatar-1': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=85',
+    'mentara-avatar-2': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=85',
+    'mentara-avatar-3': 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=80&h=80&q=85',
+    'mentara-avatar-4': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=85'
+  };
+  var portraitSources = {
+    'mentara-avatar-1': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=520&h=620&q=85',
+    'mentara-avatar-2': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=520&h=620&q=85',
+    'mentara-avatar-3': 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=520&h=620&q=85',
+    'mentara-avatar-4': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=520&h=620&q=85'
+  };
 
   testiButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -57,8 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (quoteText) quoteText.textContent = btn.dataset.quote;
       if (authorName) authorName.textContent = btn.dataset.name;
       if (authorImg) {
-        authorImg.src = 'https://picsum.photos/seed/' + btn.dataset.avatar + '/80/80';
+        authorImg.src = avatarSources[btn.dataset.avatar] || avatarSources['mentara-avatar-1'];
         authorImg.alt = btn.dataset.name;
+      }
+      if (portraitImg) {
+        portraitImg.src = portraitSources[btn.dataset.avatar] || portraitSources['mentara-avatar-1'];
+        portraitImg.alt = 'Portrait of ' + btn.dataset.name;
       }
     });
   });
