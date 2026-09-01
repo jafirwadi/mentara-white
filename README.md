@@ -26,15 +26,6 @@ No build step needed — just open `index.html` in a browser, or serve it locall
 python3 -m http.server 8000
 # visit http://localhost:8000
 ```
-
-## Push to GitHub
-
-```bash
-git remote add origin <your-repo-url>
-git branch -M main
-git push -u origin main
-```
-
 (the repo is already initialized with one commit)
 
 ## Design system
@@ -42,7 +33,6 @@ git push -u origin main
 - **Palette**: kept Mentara's own forest-green + lime accent identity, just flipped the canvas from dark green to white/off-white (`--white`, `--cream`) so it still reads as the same brand in light mode. One dark forest band is kept for the closing CTA + footer as a deliberate accent, not the default background.
 - **Type**: Poppins (display) + Roboto (body) — the pairing from your `clean-design` skill, which fit the calmer, whitespace-first tone of a mental-health brand best.
 - **Structure/spacing**: 8pt grid with `premium-design`'s spacing precision layered on top (generous section padding, restrained shadows, 150–300ms transitions).
-- I intentionally didn't pull from `creative-design` (Bangers, bold/playful) — that voice reads as loud for therapy/wellness content, so I left it out rather than forcing a blend. Happy to redo in that direction if you actually want the bolder look.
 - All tokens are CSS variables in `:root` at the top of `style.css` — swap colors/fonts there and the whole site follows.
 
 ## Images
